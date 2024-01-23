@@ -459,7 +459,7 @@ footer .footer-top {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.043);
   padding-bottom: 20px;
   padding-top: 20px;
 }
@@ -470,6 +470,24 @@ footer .navbar-brand {
 
 footer p {
   color: #adb3b9;
+}
+
+.footer-contact p {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-contact span,
+.footer-contact i {
+  vertical-align: middle;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-contact a:hover {
+  color: var(--brand);
 }
 
 footer .social-icons a {
