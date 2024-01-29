@@ -95,7 +95,7 @@ section {
 
 /* slide */
 .slide {
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,17 +223,9 @@ section {
   align-items: center;
   display: flex;
 }
-
-.info-box img {
-  width: 90px;
-}
-
-.steps {
-  align-items: center;
-  display: flex;
-}
-.steps h1 {
-  font-weight: 700;
+.info-box p {
+  text-indent: 30px;
+  text-align: justify;
 }
 
 #milestone {
@@ -241,7 +233,7 @@ section {
       rgba(255, 187, 41, 0.85),
       rgba(255, 187, 41, 0.775)
     ),
-    url(../img/bg_banner1.jpg);
+    url(../assets/backgrounds/banner1.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -423,7 +415,7 @@ section {
   padding: 32px;
 }
 
-.blog-post a {
+.blog-post .tag {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -437,6 +429,10 @@ section {
 .blog-post h5 {
   margin-top: 12px;
   margin-bottom: 12px;
+}
+
+.blog-post a {
+  text-decoration: none;
 }
 
 .blog-post small {
@@ -513,32 +509,37 @@ input.form-control {
   border-color: var(--brand);
 }
 
-.how-it-works ol {
-  counter-reset: listNumbering;
-  list-style: none;
-  padding-left: 0;
-}
-.how-it-works ol li {
-  counter-increment: listNumbering;
+.numbers {
+  display: flex;
+  align-items: center;
   position: relative;
-  margin-bottom: 30px;
-  min-height: 64px;
-  padding-left: 56px;
-  width: 50%;
-  float: left;
+}
+.step-card .card .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.big-number-yellow {
-  color: yellow;
-  content: "";
+.step-card .card {
+  min-height: 250px;
+  flex-direction: row;
 }
 
-.big-number-red {
-  color: red;
-  content: "";
+.step-card .card .card-body p {
+  align-content: center;
+  padding-left: 10px;
 }
 
-.big-number-blue {
-  color: blue;
-  content: "";
+.bignum1 {
+  color: #e0c00e;
+  font-size: 5rem;
+}
+
+.bignum2 {
+  color: #c34d2f;
+  font-size: 5rem;
+}
+.bignum3 {
+  color: #29509e;
+  font-size: 5rem;
 }

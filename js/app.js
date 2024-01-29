@@ -9,6 +9,7 @@ $(document).ready(function () {
     smartSpeed: 1000,
     autoplay: true,
     autoplayTimeout: 7000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         nav: false,
@@ -54,7 +55,7 @@ $(document).ready(function () {
 // Counting numbers
 
 let valueDisplay = document.querySelectorAll(".num");
-let interval = 3000;
+let interval = 2500;
 
 valueDisplay.forEach((valueDisplay) => {
   let startValue = 0;
