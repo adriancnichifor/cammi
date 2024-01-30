@@ -12,13 +12,13 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // reference your database
-let contactFormDB = firebase.database().ref("contactForm");
+const contactFormDB = firebase.database().ref("contactForm");
 // let contactFormDBM = firebase.database().ref("contactFormModal");
 
 document.getElementById("contactForm").addEventListener("submit", submitForm);
-// document
-//   .getElementById("contactFormModal")
-//   .addEventListener("submit", submitFormM);
+document
+  .getElementById("contactFormModal")
+  .addEventListener("submit", submitFormM);
 
 //contact form
 function submitForm(e) {
@@ -74,54 +74,56 @@ const getElementVal = (id) => {
 };
 
 //contact form modal//
-// function submitFormM(e) {
-//   e.preventDefault();
+function submitFormM(e) {
+  e.preventDefault();
 
-//   const userFirstNameM = getElementValM("userFirstNameM");
-//   const userSecondNameM = getElementValM("userSecondNameM");
-//   const userPhoneM = getElementValM("userPhoneM");
-//   const userEmailM = getElementValM("userEmailM");
-//   const userMessageM = getElementValM("userMessageM");
+  const userFirstNameM = getElementValM("userFirstNameM");
+  const userSecondNameM = getElementValM("userSecondNameM");
+  const userPhoneM = getElementValM("userPhoneM");
+  const userEmailM = getElementValM("userEmailM");
+  const userMessageM = getElementValM("userMessageM");
 
-//   saveMessagesM(
-//     userFirstNameM,
-//     userSecondNameM,
-//     userPhoneM,
-//     userEmailM,
-//     userMessageM
-//   );
+  saveMessagesM(
+    userFirstNameM,
+    userSecondNameM,
+    userPhoneM,
+    userEmailM,
+    userMessageM
+  );
 
-//   //   enable alert
-//   //   document.querySelector(".alert").style.display = "block";
+  //   enable alert
+  //   document.querySelector(".alert").style.display = "block";
 
-//   //   remove the alert
-//   //   setTimeout(() => {
-//   //     document.querySelector(".alert").style.display = "none";
-//   //   }, 3000);
+  //   remove the alert
+  //   setTimeout(() => {
+  //     document.querySelector(".alert").style.display = "none";
+  //   }, 3000);
 
-//   // reset the form
-//   document.getElementById("contactFormModal").reset();
-// }
+  // reset the form
+  document.getElementById("contactFormModal").reset();
+}
 
-// const saveMessagesM = (
-//   firstNameM,
-//   userSecondNameM,
-//   userPhoneM,
-//   userEmailM,
-//   userMessageM
-// ) => {
-//   let newContactFormM = contactFormDBM.push();
+const saveMessagesM = (
+  userFirstNameM,
+  userSecondNameM,
+  userPhoneM,
+  userEmailM,
+  userMessageM
+) => {
+  let newContactFormM = contactFormDB.push();
 
-//   newContactFormM.set({
-//     firstNameM: firstNameM,
-//     secondNameM: userSecondNameM,
-//     userPhoneM: userPhoneM,
-//     userEmailM: userEmailM,
-//     userMessageM: userMessageM,
-//     // messageDataM: serverTimestamp(),
-//   });
-// };
+  newContactFormM.set({
+    userFirstName: userFirstNameM,
+    secondName: userSecondNameM,
+    userPhone: userPhoneM,
+    userEmail: userEmailM,
+    userMessage: userMessageM,
+    // messageDataM: serverTimestamp(),
+  });
+};
 
-// const getElementValM = (id) => {
-//   return document.getElementById(id).value;
-// };
+const getElementValM = (id) => {
+  return document.getElementById(id).value;
+};
+
+// ----------end contact form FB update -------//

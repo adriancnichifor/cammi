@@ -11,6 +11,8 @@
     <!-- Owl slider -->
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- Animate on scroll library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -20,9 +22,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+  <body data-bs-target=".navbar" data-bs-offset="70">
     <!-- TOP NAV -->
-    <div class="top-nav" id="home">
+    <div class="top-nav">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-auto">
@@ -165,7 +167,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="info-box">
-                  <div class="ms-4">
+                  <div>
                     <h3 class="mb-4 text-center">Despre mine</h3>
                     <p>
                       Sunt licențiată a Facultății de Drept din cadrul
@@ -202,7 +204,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-5" data-aos="fade-left" data-aos-duration="2000">
             <img src="/assets/about.jpg" alt="portret" />
           </div>
         </div>
@@ -211,33 +213,6 @@
     <!-- End ABOUT -->
 
     <!-- How we work -->
-
-    <!-- <section id="hww" class="howwework">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col">
-            <p class="col">
-              <span class="display-4">1</span>Sunați la: (+4) 0742 519 410
-            </p>
-          </div>
-          <div class="col">
-            <p class="col">
-              <span class="display-4">2</span>
-              Discutăm întrebarea dvs. juridică sau trimiteți-o online. Toate
-              informațiile pe care le furnizați vor fi păstrate confidențiale în
-              cea mai mare măsură posibilă conform legii.
-            </p>
-          </div>
-          <div class="col">
-            <p class="col">
-              <span class="display-4">3</span>
-              În baza informațiilor și documentelor vă oferim soluția optimă
-              pentru fiecare caz.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section class="numbers">
       <div class="container">
@@ -250,7 +225,10 @@
           <!-- 1 -->
           <div class="col-lg-4 mb-4">
             <div class="step-card">
-              <div class="card shadow-sm border-warning">
+              <div
+                class="card shadow-sm border-warning"
+                data-aos="zoom-in-right"
+              >
                 <div class="card-body">
                   <h1 class="bignum1 p-4 col-3">1</h1>
                   <p class="text-start">
@@ -264,7 +242,11 @@
           <!-- 2 -->
           <div class="col-lg-4 mb-4">
             <div class="step-card">
-              <div class="card shadow-sm border-danger">
+              <div
+                class="card shadow-sm border-danger"
+                data-aos="zoom-in-up"
+                data-aos-delay="400"
+              >
                 <div class="card-body">
                   <h1 class="bignum2 p-4 col-3">2</h1>
                   <p class="text-start">
@@ -279,7 +261,11 @@
           <!-- 3 -->
           <div class="col-lg-4 mb-4">
             <div class="step-card">
-              <div class="card shadow-sm border-primary">
+              <div
+                class="card shadow-sm border-primary"
+                data-aos="zoom-in-left"
+                data-aos-delay="800"
+              >
                 <div class="card-body">
                   <h1 class="bignum3 p-4 col-3">3</h1>
                   <p>
@@ -639,7 +625,7 @@
                         type="text"
                         class="form-control"
                         placeholder="ex: Mihai"
-                        id="userFirstnameM"
+                        id="userFirstNameM"
                         aria-describedby="emailHelp"
                       />
                     </div>
@@ -708,6 +694,10 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="js/firebaseForm.js"></script>
     <!-- End SCRIPTS-->
