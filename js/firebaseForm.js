@@ -13,17 +13,20 @@ firebase.initializeApp(firebaseConfig);
 
 // reference your database
 const contactFormDB = firebase.database().ref("contactForm");
-// let contactFormDBM = firebase.database().ref("contactFormModal");
 
-document.getElementById("contactForm").addEventListener("submit", submitForm);
-document
-  .getElementById("contactFormModal")
-  .addEventListener("submit", submitFormM);
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", submitForm);
+}
 
-//contact form
+const contactFormModal = document.getElementById("contactFormModal");
+if (contactFormModal) {
+  contactFormModal.addEventListener("submit", submitFormM);
+}
+
+//main contact form
 function submitForm(e) {
   e.preventDefault();
-
   const userFirstName = getElementVal("userFirstName");
   const userSecondName = getElementVal("userSecondName");
   const userPhone = getElementVal("userPhone");
@@ -37,21 +40,12 @@ function submitForm(e) {
     userEmail,
     userMessage
   );
-
-  //   enable alert
-  //   document.querySelector(".alert").style.display = "block";
-
-  //   remove the alert
-  //   setTimeout(() => {
-  //     document.querySelector(".alert").style.display = "none";
-  //   }, 3000);
-
   // reset the form
   document.getElementById("contactForm").reset();
 }
 
 const saveMessages = (
-  userfirstName,
+  userFirstName,
   userSecondName,
   userPhone,
   userEmail,
@@ -60,12 +54,11 @@ const saveMessages = (
   let newContactForm = contactFormDB.push();
 
   newContactForm.set({
-    firstName: userfirstName,
-    secondName: userSecondName,
+    userFirstName: userFirstName,
+    userSecondName: userSecondName,
     userPhone: userPhone,
     userEmail: userEmail,
     userMessage: userMessage,
-    // messageDataM: serverTimestamp(),
   });
 };
 
@@ -73,7 +66,7 @@ const getElementVal = (id) => {
   return document.getElementById(id).value;
 };
 
-//contact form modal//
+// Modal contact form //
 function submitFormM(e) {
   e.preventDefault();
 
@@ -90,15 +83,6 @@ function submitFormM(e) {
     userEmailM,
     userMessageM
   );
-
-  //   enable alert
-  //   document.querySelector(".alert").style.display = "block";
-
-  //   remove the alert
-  //   setTimeout(() => {
-  //     document.querySelector(".alert").style.display = "none";
-  //   }, 3000);
-
   // reset the form
   document.getElementById("contactFormModal").reset();
 }
@@ -114,16 +98,13 @@ const saveMessagesM = (
 
   newContactFormM.set({
     userFirstName: userFirstNameM,
-    secondName: userSecondNameM,
+    userSecondName: userSecondNameM,
     userPhone: userPhoneM,
     userEmail: userEmailM,
     userMessage: userMessageM,
-    // messageDataM: serverTimestamp(),
   });
 };
 
 const getElementValM = (id) => {
   return document.getElementById(id).value;
 };
-
-// ----------end contact form FB update -------//

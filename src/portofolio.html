@@ -119,23 +119,26 @@
       <div id="projects-slider" class="owl-theme owl-carousel">
         <div class="project">
           <div class="overlay"></div>
-          <img src="../assets/backgrounds/Project1.jpg" alt="proiect1" />
+          <img src="../assets/backgrounds/merlins.jpg" alt="merlins" />
           <div class="content">
-            <h2>Contract de închiriere</h2>
+            <h2>Contract de vânzare</h2>
             <h6>2020</h6>
           </div>
         </div>
         <div class="project">
           <div class="overlay"></div>
-          <img src="../assets/backgrounds/Project2.jpg" alt="proiect2" />
+          <img src="../assets/backgrounds/autonom.jpg" alt="autonom" />
           <div class="content">
-            <h2>Divorț</h2>
+            <h2>Contract de închiriere</h2>
             <h6>2016</h6>
           </div>
         </div>
         <div class="project">
           <div class="overlay"></div>
-          <img src="../assets/backgrounds/project3.jpg" alt="proiect3" />
+          <img
+            src="../assets/backgrounds/ArcelorMittal.jpg"
+            alt="ArcelorMittal"
+          />
           <div class="content">
             <h2>Contravenție</h2>
             <h6>2016</h6>
@@ -143,18 +146,18 @@
         </div>
         <div class="project">
           <div class="overlay"></div>
-          <img src="../assets/backgrounds/project4.jpg" alt="proiect4" />
+          <img src="../assets/backgrounds/dinamic92.jpg" alt="dinamic92" />
           <div class="content">
-            <h2>Practică judiciară CEDO</h2>
-            <h6>2021</h6>
+            <h2>Insolvență</h2>
+            <h6>2023</h6>
           </div>
         </div>
         <div class="project">
           <div class="overlay"></div>
-          <img src="../assets/backgrounds/project5.jpg" alt="proiect5" />
+          <img src="../assets/backgrounds/marsat.jpg" alt="marsat" />
           <div class="content">
             <h2>Insolvență</h2>
-            <h6>2023</h6>
+            <h6>2020</h6>
           </div>
         </div>
       </div>
@@ -167,7 +170,7 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
-              <h4 class="navbar-brand">CA Mihaela Monica Iosub</h4>
+              <h4 class="navbar-brand text-white">CA Mihaela Monica Iosub</h4>
               <div class="footer-contact">
                 <p><i class="fa-solid fa-envelope"></i></p>
                 <a href="mailto:contact@cammi.ro">contact@cammi.ro</a>
@@ -199,7 +202,7 @@
               document
                 .getElementById("copyright")
                 .appendChild(document.createTextNode(new Date().getFullYear()));
-            </script> </span
+            </script></span
           >. Toate drepturile rezervate
         </p>
       </div>
@@ -229,19 +232,23 @@
                   <div></div>
                 </div>
                 <div class="col-lg-8">
-                  <form class="p-lg-5 col-12 row g-3">
+                  <form class="p-lg-5 col-12 row g-3" id="contactFormModal">
                     <div>
                       <h1>Contactați-ne</h1>
+                      <!-- <p>
+                        Fell free to contact us and we will get back to you as
+                        soon as possible
+                      </p> -->
                     </div>
                     <div class="col-lg-6">
-                      <label for="userFirstname" class="form-label"
+                      <label for="userFirstName" class="form-label"
                         >Prenume:</label
                       >
                       <input
                         type="text"
                         class="form-control"
                         placeholder="ex: Mihai"
-                        id="userFirstname"
+                        id="userFirstNameM"
                         aria-describedby="emailHelp"
                       />
                     </div>
@@ -253,7 +260,7 @@
                         type="text"
                         class="form-control"
                         placeholder="ex: Popescu"
-                        id="userSecondName"
+                        id="userSecondNameM"
                         aria-describedby="emailHelp"
                       />
                     </div>
@@ -263,7 +270,7 @@
                         type="text"
                         class="form-control"
                         placeholder="ex: 0712345678"
-                        id="userPhone"
+                        id="userPhoneM"
                         aria-describedby="emailHelp"
                       />
                     </div>
@@ -273,7 +280,7 @@
                         type="email"
                         class="form-control"
                         placeholder="ex: mail@mail.com"
-                        id="userEmail"
+                        id="userEmailM"
                         aria-describedby="emailHelp"
                       />
                     </div>
@@ -285,13 +292,13 @@
                         name=""
                         placeholder="Scrieți aici mesajul dumneavoastră..."
                         class="form-control"
-                        id=""
+                        id="userMessageM"
                         rows="4"
                       ></textarea>
                     </div>
 
                     <div class="col-12">
-                      <button type="submit" class="btn btn-brand">
+                      <button type="submitM" class="btn btn-brand">
                         Trimite mesajul!
                       </button>
                     </div>
@@ -310,6 +317,8 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
     <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="../js/firebaseForm.js"></script>
     <!-- End SCRIPTS-->
   </body>
 </html>

@@ -5,7 +5,7 @@ $(document).ready(function () {
     margin: 0,
     items: 1,
     dots: false,
-    navText: ["PREV", "NEXT"],
+    navText: ["<-", "->"],
     smartSpeed: 1000,
     autoplay: true,
     autoplayTimeout: 7000,
@@ -28,7 +28,7 @@ $(document).ready(function () {
     smartSpeed: 600,
     center: true,
     autoplay: true,
-    autoplayTimeout: 4000,
+    autoplayTimeout: 6000,
     responsive: {
       0: {
         items: 1,
