@@ -1,3 +1,4 @@
+//owl settings
 $(document).ready(function () {
   //Owl
   $(".hero-slider").owlCarousel({
@@ -53,7 +54,6 @@ $(document).ready(function () {
 });
 
 // Counting numbers
-
 let valueDisplay = document.querySelectorAll(".num");
 let interval = 2500;
 

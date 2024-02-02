@@ -1,7 +1,6 @@
 const blogsDB = firebase.database().ref("blogs");
 
 function upload() {
-  // get data
   const post_image = document.getElementById("post_image").files[0];
   const post_title = document.getElementById("post_title").value;
   const post_tag = document.getElementById("post_tag").value;
@@ -11,9 +10,8 @@ function upload() {
 
   const imagePath = firebase.storage().ref("images/" + imageName);
 
-  //incarca imaginea
   const uploadTask = imagePath.put(post_image);
-  //to get the state of image uploading....
+
   uploadTask.on(
     "state_changed",
     function (snapshot) {
@@ -25,7 +23,6 @@ function upload() {
     },
     function () {
       uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-        //push in baza de date
         blogsDB
           .push({
             post_tag: post_tag,
@@ -63,21 +60,14 @@ function delete_post(key) {
 
 function getdata() {
   blogsDB.once("value").then(function (snapshot) {
-    //get your posts div
     const posts_div = document.getElementById("posts");
-    //remove all remaining data in that div
     posts_div.innerHTML = "";
-    //get data from firebase
-    const data = snapshot.val();
-    console.log(data);
-    //now pass this data to our posts div
-    //we have to pass our data to for loop to get one by one
-    //we are passing the key of that post to delete it from database
-    for (let [key, value] of Object.entries(data)) {
-      // Create an anchor tag with the href pointing to the article page (replace 'article.html' with your actual page URL)
-      const articleLink = "<a href='article.html?id=" + key + "'>";
 
-      // Append the article content inside the anchor tag
+    const data = snapshot.val();
+    // console.log(data);
+
+    for (let [key, value] of Object.entries(data)) {
+      const articleLink = "<a href='article.html?id=" + key + "'>";
       const articleContent =
         "<div class='col-md-6 py-4'>" +
         "<article class='blog-post h-100'>" +
@@ -95,19 +85,32 @@ function getdata() {
         "<h5>" +
         value.post_title +
         "</h5>" +
-        // "<p>" +
-        // value.post_content +
-        // "</p>" +
         "</div>" +
         "</article>" +
         "</a>" +
+        "<div class='is-hidden'>" +
         "<button class='btn btn-danger my-6 btn-sm' id='" +
         key +
         "' onclick='delete_post(this.id)'>Delete</button>" +
+        "</div>" +
         "</div>";
-
-      // Append the entire article to the posts_div
       posts_div.innerHTML += articleContent;
     }
   });
+}
+
+// Administrator loggin
+function adminArticle() {
+  const password = document.getElementById("password").value;
+  localStorage.setItem("isAdmin", "admin");
+  if (password === localStorage.getItem("isAdmin")) {
+    let unHideElement = document.querySelectorAll(".is-hidden");
+    let hideElement = document.getElementById("loggin");
+    unHideElement.forEach(function (element) {
+      element.classList.remove("is-hidden");
+      hideElement.classList.add("is-hidden");
+    });
+  } else {
+    alert("Parola este incorectă, te rog să încerci din nou!");
+  }
 }

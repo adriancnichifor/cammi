@@ -120,136 +120,123 @@
     </nav>
     <!-- End BOTTOM NAV -->
 
-    <!-- SERVICES -->
-    <section id="services" class="text-center">
-      <div class="container">
-        <div class="row">
+    <!-- BLOG -->
+    <section class="blog">
+      <div class="container mt-2">
+        <div class="row" id="loggin">
           <div class="col-12">
             <div class="intro">
-              <h6>Serviciile noastre</h6>
-              <h1>Cu ce ne ocupăm?</h1>
-              <p class="mx-auto">
-                Alegerea unui avocat de încredere și competent este esențială în
-                orice situație juridică, iar motivarea pentru această alegere se
-                bazează pe beneficiile palpabile pe care le aduce în evoluția și
-                rezolvarea cazului tău. Iată ariile de competență cu care ne
-                ocupăm:
-              </p>
+              <h6>Admin</h6>
+              <h1>Aici poți edita articolele</h1>
+              <div class="row justify-content-center">
+                <div class="col-5">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Parola este..."
+                    id="password"
+                  />
+                </div>
+                <div class="col-2 text-start">
+                  <button class="btn btn-brand" onclick="adminArticle()">
+                    Verifică parola
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="service h-100">
-              <img
-                src="../assets/logos/icon1.png"
-                alt="contincios administrativ si fiscal"
-              />
-              <h5>Contencios administrativ si fiscal</h5>
-              <p>
-                Oferim consultanță și reprezentare în instanță cu privire la
-                revocarea/suspendarea/anularea actelor administrative. De
-                asemenea, oferim clienților suport pentru recuperări debite,
-                somații de plată, negocieri și arbitraj, pretenții, contracte și
-                tranzacții comerciale. În plus, ne implicăm pentru restituire
-                impozite și taxe, contestare decizii de impunere, obligații
-                fiscal, s.a.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service h-100">
-              <img src="../assets/logos/icon2.png" alt="achizitii publice" />
-              <h5>Achizitii publice</h5>
-              <p>
-                Consiliere pentru clienți în legătură cu achiziții publice,
-                finanțare și leasing de bunuri, concesiuni de active și servicii
-                publice, redactarea și negocierea parteneriatelor public-private
-                (PPP) și a contractelor de concesiune, studii de fezabilitate,
-                aspecte de reglementare, redevențe și taxe.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service h-100">
-              <img src="../assets/logos/icon3.png" alt="drept comercial" />
-              <h5>Drept comercial</h5>
-              <p>
-                Cu experiență în domeniul înființării societăților comerciale,
-                asociatiilor și fundațiilor, oferim asistență juridică
-                constantă, redactăm documente precum contracte și acorduri, și
-                oferim reprezentare în litigii comerciale. Ne ocupăm eficient de
-                recuperarea de credite și facilităm legalizarea și punerea în
-                executare a hotărârilor judecătorești. Avem în vedere protejarea
-                intereselor clienților și atingerea obiectivelor într-un cadru
-                legal.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service h-100">
-              <img src="../assets/logos/icon4.png" alt="dreptul muncii" />
-              <h5>Dreptul muncii</h5>
-              <p>
-                Oferim asistență juridică completă pentru contractele
-                individuale și colective de muncă. Ne ocupăm de încheierea,
-                executarea, modificarea și încetarea acestor contracte,
-                respectând legislația în vigoare. Echipa noastră vă sprijină în
-                contestarea sancțiunilor disciplinare și acțiuni pentru
-                recuperarea prejudiciilor. Asigurăm consultanță specializată în
-                desfacerea contractelor individuale de muncă, garantând
-                respectarea normelor legale și reprezentarea eficientă a
-                intereselor dvs. în toate aspectele legate de relațiile de
-                muncă.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service h-100">
-              <img src="../assets/logos/icon7.png" alt="dreptul contractelor" />
-              <h5>Dreptul contractelor</h5>
-              <p>
-                Oferim suport cuprinzător, inclusiv în elaborarea, revizuirea și
-                negocierea contractelor și ne asigurăm că acestea reflectă în
-                mod precis interesele clienților și respectă legislația
-                relevantă. De asemenea, intervenim în rezolvarea litigiilor
-                contractuale, oferind asistență în mediere, arbitraj sau prin
-                reprezentarea clienților în instanță, asigurând astfel un
-                parteneriat juridic robust și eficient în toate aspectele
-                relațiilor contractuale.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service h-100">
-              <img src="../assets/logos/icon5.png" alt="drept fiscal" />
-              <h5>Drept fiscal</h5>
-              <p>
-                Soluții juridice de asistenţă în procedurile fiscale de
-                contestaţii şi contencios administrativ privitoare la actele de
-                control ale organelor fiscale de stabilire a impozitelor,
-                taxelor şi penalităţilor de întârziere pentru obligaţiile
-                bugetare. Asistenţă şi reprezentare în fata organelor de control
-                financiar-fiscal;
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service h-100">
-              <img src="../assets/logos/icon6.png" alt="dreptul insolvenței" />
-              <h5>Dreptul insolvenței</h5>
-              <p>
-                Reprezentăm societățile aflate în procedura de insolvență, în
-                incapacitatea de plată sau faliment și le oferim cele mai bune
-                soluții de gestionare;
-              </p>
+
+        <div class="row is-hidden" id="posts">
+          <!-- <div class="col-5 py-4" ></div> -->
+        </div>
+        <div
+          class="accordion accordion-flush mt-4 is-hidden"
+          id="accordionAddPosts"
+        >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Vrei sa scrii un articol pe blog?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <form id="post-form">
+                  <h3 class="text-center">Scrie articolul mai jos</h3>
+                  <div class="row">
+                    <div class="col-lg-3 text-start mb-2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Tag-ul articolului"
+                        id="post_tag"
+                      />
+                    </div>
+                    <div class="col-lg-3 text-start mb-2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Titlul articolului"
+                        id="post_title"
+                      />
+                    </div>
+                    <div class="col-lg-2 text-start mb-2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Data articolului"
+                        id="post_date"
+                      />
+                    </div>
+                    <div class="col-lg-4 text-start mb-2">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="post_image"
+                        accept="images/*"
+                      />
+                      <label for="image">Încarcă imaginea</label>
+                    </div>
+                    <div class="col-lg-12 text-start mb-2">
+                      <textarea
+                        type="text"
+                        class="form-control"
+                        placeholder="Ce noutăți avem azi?"
+                        id="post_content"
+                        rows="4"
+                      ></textarea>
+                    </div>
+
+                    <div class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-success"
+                        onclick="upload()"
+                      >
+                        Încarcă postarea!
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End SERVICES -->
-
     <!-- FOOTER -->
     <footer>
       <div class="footer-top text-center">
@@ -384,7 +371,7 @@
                     </div>
 
                     <div class="col-12">
-                      <button type="submitM" class="btn btn-brand">
+                      <button type="submit" class="btn btn-brand">
                         Trimite mesajul!
                       </button>
                     </div>
@@ -402,9 +389,10 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
-    <script src="../js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="../js/firebaseForm.js"></script>
+    <script src="../js/articles.js"></script>
+    <script src="../js/app.js"></script>
     <!-- End SCRIPTS-->
   </body>
 </html>
