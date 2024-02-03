@@ -58,14 +58,13 @@ function delete_post(key) {
   location.reload();
 }
 
+// Get data from Firebase
 function getdata() {
   blogsDB.once("value").then(function (snapshot) {
     const posts_div = document.getElementById("posts");
     posts_div.innerHTML = "";
-
     const data = snapshot.val();
     // console.log(data);
-
     for (let [key, value] of Object.entries(data)) {
       const articleLink = "<a href='article.html?id=" + key + "'>";
       const articleContent =
@@ -99,13 +98,13 @@ function getdata() {
   });
 }
 
-// Administrator loggin
+// Administrator login
 function adminArticle() {
   const password = document.getElementById("password").value;
   localStorage.setItem("isAdmin", "admin");
   if (password === localStorage.getItem("isAdmin")) {
     let unHideElement = document.querySelectorAll(".is-hidden");
-    let hideElement = document.getElementById("loggin");
+    let hideElement = document.getElementById("login");
     unHideElement.forEach(function (element) {
       element.classList.remove("is-hidden");
       hideElement.classList.add("is-hidden");

@@ -120,10 +120,11 @@
     </nav>
     <!-- End BOTTOM NAV -->
 
-    <!-- BLOG -->
+    <!-- ADMIN ARTICLES -->
     <section class="blog">
       <div class="container mt-2">
-        <div class="row" id="loggin">
+        <!-- Login -->
+        <div class="row" id="login">
           <div class="col-12">
             <div class="intro">
               <h6>Admin</h6>
@@ -146,10 +147,13 @@
             </div>
           </div>
         </div>
+        <!-- End Login -->
 
-        <div class="row is-hidden" id="posts">
-          <!-- <div class="col-5 py-4" ></div> -->
-        </div>
+        <!-- Posts from Firebase -->
+        <div class="row is-hidden" id="posts"></div>
+        <!-- End Posts from Firebase -->
+
+        <!-- Upload article -->
         <div
           class="accordion accordion-flush mt-4 is-hidden"
           id="accordionAddPosts"
@@ -235,8 +239,11 @@
             </div>
           </div>
         </div>
+        <!-- End Upload article -->
       </div>
     </section>
+    <!-- End ADMIN ARTICLES -->
+
     <!-- FOOTER -->
     <footer>
       <div class="footer-top text-center">
